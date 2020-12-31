@@ -1,15 +1,15 @@
-import React, { useRef, useState } from 'react'
-import { Canvas, useFrame } from 'react-three-fiber'
+import React, { useRef, useState } from 'react';
+import { Canvas, useFrame } from 'react-three-fiber';
 import FPSStats from "react-fps-stats";
 
 const Box = (props) => {
-  const mesh = useRef()
-  const [hovered, setHover] = useState(false)
-  const [active, setActive] = useState(false)
+  const mesh = useRef();
+  const [hovered, setHover] = useState(false);
+  const [active, setActive] = useState(false);
 
   useFrame(() => {
     mesh.current.rotation.x = mesh.current.rotation.y += 0.01
-  })
+  });
 
   return (
     <mesh
@@ -23,7 +23,7 @@ const Box = (props) => {
       <meshStandardMaterial color={hovered ? 'hotpink' : 'orange'} />
     </mesh>
   )
-}
+};
 
 const App = () => {
   return (
@@ -42,6 +42,6 @@ const App = () => {
       </Canvas>
     </>
   )
-}
+};
 
-export default App
+export default App;
