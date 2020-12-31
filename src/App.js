@@ -28,7 +28,10 @@ const Box = (props) => {
 export default function App() {
   return (
     <>
-      <FPSStats />
+      <FPSStats
+        left="auto"
+        right="0"
+      />
 
       <Canvas>
         <ambientLight intensity={0.5} />
