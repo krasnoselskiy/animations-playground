@@ -25,7 +25,7 @@ const Box = (props) => {
   )
 }
 
-export default function App() {
+const App = () => {
   return (
     <>
       <FPSStats
@@ -43,3 +43,5 @@ export default function App() {
     </>
   )
 }
+
+export default App
